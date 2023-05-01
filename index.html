@@ -6,12 +6,42 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style/style.css">
-  <script src="script/script.js"></script>
+  <script src="script/script.js" defer></script>
   <title>Book-Library</title>
 </head>
 
-<body>
-
+<body class="light">
+  <header>
+    <h1>Book Library</h1>
+  </header>
+  <main>
+    <div class="add-book">
+      <button id="add-book-button">+ Add Book</button>
+    </div>
+    <div class="books">
+      <div class="book-info">
+        <h1>Add New Book</h1>
+        <form action="">
+          <input type="text" name="title" id="title" placeholder="title" maxlength="12">
+          <input type="text" name="author" id="author" placeholder="author" maxlength="12">
+          <input type="number" name="pages" id="pages" placeholder="1-500" min="1" max="500">
+          <div class="checkbox-container">
+            <label for="read">Have you read it?</label>
+            <input type="checkbox" name="read" id="read">
+          </div>
+          <button class="submit-book">Submit</button>
+          <button class="close-form">Close</button>
+        </form>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>Copyright &copy; 2023 Cunbex </p>
+    <a target="_blank" href="https://github.com/cunbex/Js-Books-Library"><img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Github-circle_%28CoreUI_Icons_v1.0.0%29.svg/2048px-Github-circle_%28CoreUI_Icons_v1.0.0%29.svg.png"
+        alt="Github logo">
+    </a>
+  </footer>
 </body>
 
 </html>

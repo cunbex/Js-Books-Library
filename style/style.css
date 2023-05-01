@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
 html,
 body,
 div,
@@ -121,4 +122,194 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+button {
+  font-family: "Roboto", sans-serif;
+}
+/* ---------------------------- Header -------------------------------------*/
+header {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 1px 100px rgba(0, 0, 0, 0.274);
+}
+header > h1 {
+  font-size: 2rem;
+  font-weight: 900;
+}
+/* ---------------------------- Main -------------------------------------*/
+main {
+  height: 80vh;
+  display: grid;
+  grid-template-rows: 1fr 9fr;
+}
+
+main > .add-book {
+  justify-self: center;
+  align-self: flex-end;
+}
+.add-book > button {
+  border: none;
+  background-color: transparent;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.add-book > button:hover {
+  cursor: pointer;
+}
+body.dark {
+  background-color: rgba(0, 0, 0, 0.459);
+}
+body.light {
+  background-color: transparent;
+}
+.book-info {
+  z-index: 99;
+  visibility: hidden;
+  position: absolute;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 17rem;
+  height: 60%;
+  border-radius: 0.5rem;
+  background-color: wheat;
+}
+form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 1.5rem 0rem;
+  height: 100%;
+  justify-content: space-between;
+}
+.book-info > h1 {
+  padding-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+form > input {
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  height: 2.5rem;
+  width: 70%;
+  padding-left: 1rem;
+}
+
+form > button {
+  padding: 0.75rem 3rem;
+  border: none;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 2rem;
+}
+form > button:last-child {
+  font-size: 0.8rem;
+  padding: 0.5rem 2.5rem;
+}
+form > button:hover {
+  cursor: pointer;
+}
+.books {
+  position: relative;
+  justify-self: start;
+  justify-items: start;
+  align-items: center;
+  width: 90%;
+  gap: 1rem;
+  padding: 0% 5%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.book-card {
+  margin: 1rem 0;
+  width: 200px;
+  height: 250px;
+  display: flex;
+  gap: 1rem;
+  border-radius: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: wheat;
+  box-shadow: 0px 1px 100px rgba(0, 0, 0, 0.199);
+}
+.book-card > button {
+  width: 60%;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.5rem 0.5rem;
+  border: none;
+  border-radius: 1rem;
+}
+.not-read {
+  background: rgba(255, 0, 0, 0.459);
+  color: white;
+}
+.read {
+  background: rgba(0, 128, 0, 0.432);
+  color: white;
+}
+.book-card > button:hover {
+  cursor: pointer;
+}
+.book-card.dark {
+  opacity: 0.5;
+}
+.book.card.light {
+  opacity: 1;
+}
+.checkbox-container > label {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+/* ---------------------------- Footer -------------------------------------*/
+footer {
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+footer > a > img {
+  width: 20px;
+  animation: spin 5s linear infinite;
+  animation-play-state: running;
+}
+footer > p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+/* Define the animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+footer img:hover {
+  animation-play-state: paused;
+  animation-delay: 0.5s;
 }
